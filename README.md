@@ -22,5 +22,6 @@ Why These Concepts Matter
 Technologies Used
 
 - JavaScript (ES6+)
+
   Author
 - GitHub: (https://github.com/kimah20X)
