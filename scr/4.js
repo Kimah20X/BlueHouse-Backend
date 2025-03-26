@@ -13,3 +13,5 @@ function signUpUser(firstName, lastName) {
 signUpUser ("Bob", "Dylan").then((value) => {
   console.log(value);
 });
+
+export default signUpUser;

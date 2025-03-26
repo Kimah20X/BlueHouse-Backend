@@ -13,4 +13,4 @@ function uploadPhoto(filename) {
 uploadPhoto('guillaume.jpg').catch((error) => {
   console.log(error);
 });
-
+export default uploadPhoto;

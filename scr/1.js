@@ -21,8 +21,6 @@ function getFullResponseFromAPI(success) {
     }
   });
 }
-promise.then((response) => {
-  console.log(response);
-}).catch((error) => {
-  console.log(error);
-});
+
+console.log(getFullResponseFromAPI(true));
+//console.log(getFullResponseFromAPI(false));

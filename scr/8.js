@@ -8,18 +8,12 @@ export default function divideFunction(numerator, denominator) {
 
 }
 */
-import divideFunction from './8-try';
 
-function divideFunction(numerator, denominator){
-  if(denominator === 0){
+function divideFunction(numerator, denominator) {
+  if (denominator === 0) {
     throw Error('cannot divide by 0');
-  } else {
-    return numerator / denominator;
   }
-  
+  return numerator / denominator;
 }
-promise.then(() => {
-  console.log(divideFunction(10, 2));
-  console.log(divideFunction(10, 0));
-});
-
+console.log(divideFunction(10, 2));
+console.log(divideFunction(10, 0));

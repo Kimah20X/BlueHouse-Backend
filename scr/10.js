@@ -15,19 +15,20 @@ If one of the async function fails, return an empty object. Example:
   user: null,
 }
 */ 
-import { uploadPhoto, createUser } from './utils';
-async function asyncUploadUser() {
+import { uploadPhoto, createUser } from './Utils.js';
+
+  export default async function asyncUploadUser() {
     try {
-      const photo = await uploadPhoto();
-      const user = await createUser();
-      return({ photo, user });
-    } catch (error) {
-      return({ photo: null, user: null });
+      const [photo, user] = await Promise.all([uploadPhoto(), createUser()]);
+      return { photo, user };
+    } catch {
+      return { photo: null, user: null };
     }
   }
-async function testAsyncUploadUser () {
-  const result = await asyncUploadUser ();
-  console.log(result);
-}
 
-testAsyncUploadUser ();
+const test = async () => {
+  const value = await asyncUploadUser();
+  console.log(value);
+};
+
+test();

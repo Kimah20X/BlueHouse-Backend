@@ -9,6 +9,7 @@ function getResponseFromAPI() {
     }, 500);
   });
 }
-getResponseFromAPI.then(() => {
-  console.log('Got a response from the API');
-});
+ const response = getResponseFromAPI();
+ console.log(response instanceof Promise);
+
+ export default getResponseFromAPI;
